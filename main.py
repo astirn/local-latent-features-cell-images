@@ -1,12 +1,5 @@
-from run_mode import test_mode
-
-# real run?
-if not test_mode():
-    import matplotlib as mpl
-    mpl.use('Agg')
-
 import os
-from matplotlib import pyplot as plt
+from run_mode import test_mode
 from utils import load_partitioned_data, split_data
 from models import AutoEncoder, VariationalAutoEncoder, train, generate_latent_matrix
 
