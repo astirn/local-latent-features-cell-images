@@ -119,6 +119,4 @@ for i in range(len(architectures)):
     train(vae, data[i_train], data[i_valid])
     generate_latent_matrix(vae, data)
 
-plt.ioff()
-plt.show()
 print('All done!')
