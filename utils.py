@@ -1,4 +1,4 @@
-from run_mode import test_mode
+from test_mode import test_mode
 
 # real run?
 if not test_mode():

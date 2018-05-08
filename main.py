@@ -1,5 +1,5 @@
 import os
-from run_mode import test_mode
+from test_mode import test_mode
 from utils import load_partitioned_data, split_data
 from models import AutoEncoder, VariationalAutoEncoder, train, generate_latent_matrix
 
