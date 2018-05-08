@@ -15,9 +15,10 @@ characteristics linked to treatment success.
 'Data' folder. Specifically, this files employs the trained models resulting from 'main.py' to generate reconstructions
 for the image partitions and thereafter stitch them together into a full-size format.
 
-- 'main.py'--Run this file after 'utils.py'. This file trains the two model families for all the listed architectures.
+- 'main.py'--Run this file after 'utils.py'. This file trains the two model families for both Bernoulli and Gaussian
+data treatments across all the listed architectures.
 If 'test_mode()' returns False, this file will load the entire data set and run for the full number of epochs.
-If 'test_mode()' returns True, this file will load a data subset and run only for a few of epochs for code testing
+If 'test_mode()' returns True, this file will load a data subset and run only for a few epochs for code testing
 purposes.
 
 - 'models.py'--This file contains the Auto-Encoder (AE) and Variational Auto-Encoder (VAE) Class implementations in
@@ -58,7 +59,7 @@ the reconstruction of a randomly selected image partition at the end of each tra
 - 'ResultsTest'--This directory has identical structure and form as 'ResultsReal', but is updated when 'test_mode()'
 returns True.
 
-- 'Test'--This directory has similar, but slightly different, structure as 'ResultsReal' and 'ResultsTest'. It is
+- 'Test'--This directory has a similar, but slightly different, structure as 'ResultsReal' and 'ResultsTest'. It is
 generated when calling 'models.py' and will contain results for MNIST data.
 
 ## Requirements
