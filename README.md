@@ -1,5 +1,4 @@
-# local-latent-features-cell-images
-#### Locally Latent Spatial Features of Cell Images with Multiple Biomarker Channels
+# Locally Latent Spatial Features of Cell Images with Multiple Biomarker Channels
 This work processes multi-channel lung cancer cell images to generate a compact latent space for local cellular regions.
 At a high level, latent space discovery is an important first step to reducing these images to a compact vector
 representation from which researchers can:
