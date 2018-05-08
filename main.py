@@ -1,7 +1,7 @@
-from cloud_run import cloud_run
+from run_mode import test_mode
 
-# cloud run?
-if cloud_run():
+# real run?
+if not test_mode():
     import matplotlib as mpl
     mpl.use('Agg')
 
@@ -10,8 +10,8 @@ from matplotlib import pyplot as plt
 from utils import load_partitioned_data, split_data
 from models import AutoEncoder, VariationalAutoEncoder, train, generate_latent_matrix
 
-# cloud run?
-if cloud_run():
+# real run?
+if not test_mode():
 
     # load all partitioned data
     data = load_partitioned_data()

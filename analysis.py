@@ -1,3 +1,10 @@
+from run_mode import test_mode
+
+# real run?
+if not test_mode():
+    import matplotlib as mpl
+    mpl.use('Agg')
+
 import os
 import pickle
 import tensorflow as tf
@@ -6,10 +13,13 @@ from utils import get_image_files, partition_image, plot, stitch_partition
 from models import AutoEncoder, VariationalAutoEncoder, mdl_reconstruction
 
 # result base directory
-RESULT_DIR = os.path.join(os.getcwd(), 'ResultsReal')
+if not test_mode():
+    RESULT_DIR = os.path.join(os.getcwd(), 'ResultsReal')
+else:
+    RESULT_DIR = os.path.join(os.getcwd(), 'ResultsTest')
 
 # reconstruction directory
-RECON_DIR = os.path.join(os.getcwd(), 'Recon')
+RECON_DIR = os.path.join(os.getcwd(), 'Reconstruction')
 
 # result directories
 mdl_dirs = [os.path.join('AE', 'Bern', 'Arch1'),

@@ -1,7 +1,7 @@
-from cloud_run import cloud_run
+from run_mode import test_mode
 
-# cloud run?
-if cloud_run():
+# real run?
+if not test_mode():
     import matplotlib as mpl
     mpl.use('Agg')
 
@@ -10,7 +10,6 @@ import shutil
 import numpy as np
 from skimage import io
 import matplotlib.pyplot as plt
-import matplotlib.gridspec as gridspec
 
 # data partition directory
 data_partition_dir = os.path.join('DataPartitions')
