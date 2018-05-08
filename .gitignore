@@ -1,0 +1,18 @@
+# ignore PyCharm IDE Files
+.idea/
+
+# ignore virtual environment
+venv/
+
+# ignore py cache
+__pycache__/
+
+# ignore MNIST Data
+Project/MNIST-data
+
+# ignore Vectra Data
+Project/Data
+Project/DataPartitions
+
+# ignore Test Folder
+Project/Test
