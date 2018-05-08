@@ -7,8 +7,9 @@ __pycache__/
 # ignore virtual environment
 venv/
 
-# ignore MNIST Data
-
+# ignore MNIST Data and Test Folder
+MNIST-data
+Test
 
 # ignore Vectra Data
 Data
